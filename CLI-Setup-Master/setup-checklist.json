@@ -1,0 +1,59 @@
+{
+  "project": "CLI Setup Master",
+  "objective": "Install and use the Storacha CLI in under 2 minutes",
+  "status": "completed",
+  "completion_date": "2024-01-15",
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Ensure Node.js v18+ is installed",
+      "command": "node --version",
+      "expected_output": "v18.x.x or higher",
+      "verification": "check_node_version",
+      "status": "completed",
+      "notes": "Node.js is the runtime environment required for Storacha CLI"
+    },
+    {
+      "id": 2,
+      "description": "Ensure npm v7+ is installed",
+      "command": "npm --version",
+      "expected_output": "7.x.x or higher",
+      "verification": "check_npm_version",
+      "status": "completed",
+      "notes": "npm is the package manager for Node.js packages"
+    },
+    {
+      "id": 3,
+      "description": "Install Storacha CLI globally",
+      "command": "npm install -g @storacha/client",
+      "expected_output": "Successfully installed @storacha/client",
+      "verification": "check_storacha_installation",
+      "status": "completed",
+      "notes": "Global installation makes 'storacha' command available system-wide"
+    },
+    {
+      "id": 4,
+      "description": "Verify installation with version check",
+      "command": "storacha --version",
+      "expected_output": "storacha/x.x.x",
+      "verification": "check_storacha_version",
+      "status": "completed",
+      "notes": "Version confirmation ensures proper installation"
+    }
+  ],
+  "prerequisites": {
+    "operating_systems": ["Windows 10/11", "macOS 10.15+", "Linux (Ubuntu/Debian)"],
+    "required_tools": ["Node.js", "npm", "Terminal/Command Prompt"],
+    "network_requirements": ["Internet connection for installation"]
+  },
+  "test_commands": [
+    "storacha --help",
+    "storacha init",
+    "storacha status"
+  ],
+  "additional_resources": [
+    "https://docs.storacha.com/cli",
+    "https://nodejs.org/en/download",
+    "https://docs.npmjs.com/downloading-and-installing-node-js-and-npm"
+  ]
+}
