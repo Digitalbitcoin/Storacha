@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # 🚀 Storacha Portfolio - All Project Implementations
 
 This repository contains my complete Storacha learning journey with implementations for all projects.
