@@ -1,0 +1,16 @@
+{
+  "name": "storacha-js-integration",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node upload.js"
+  },
+  "dependencies": {
+    "@storacha/client": "latest",
+    "files-from-path": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=7.0.0"
+  }
+}
