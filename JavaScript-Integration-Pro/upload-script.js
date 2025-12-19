@@ -8,7 +8,7 @@ async function storachaIntegration() {
     console.log('✅ Client initialized');
     
     // 2. Login (you'll need to verify via email)
-    const account = await client.login('abbyyys@gmail.com');
+    const account = await client.login('your-email@example.com');
     console.log('📧 Verification succesful');
     
     // 3. Create a simple test file
@@ -29,4 +29,5 @@ async function storachaIntegration() {
 }
 
 // Execute
+
 storachaIntegration().catch(console.error);
