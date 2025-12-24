@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Storacha Vault</title>
+    <meta name="description" content="Store, share, and preserve your digital art on the decentralized web with Storacha Vault.
+Your artwork lives forever on IPFS.">
+    <style>
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+      button{cursor: pointer !important;}
+      /* Loading Spinner Styles */
+      #loading-spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ea6666 0%, #8d0303 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease-out;
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      .loading-text {
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        font-weight: 500;
+      }
+
+      .loading-logo {
+        margin-bottom: 30px;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        letter-spacing: 1px;
+      }
+
+      /* Fade-out animation for spinner */
+      .spinner-fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Hide root initially to prevent flash of unstyled content */
+      #root {
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+      }
+
+      #root.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+      <div class="loading-logo">🎨 Storacha Vault</div>
+      <div class="spinner"></div>
+      <div class="loading-text">Loading Storacha Vault DApp...</div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Hide spinner when React app is mounted
+      document.addEventListener('DOMContentLoaded', function() {
+        // Hide spinner and show root after React app is loaded
+        window.addEventListener('reactAppMounted', function() {
+          const spinner = document.getElementById('loading-spinner');
+          const root = document.getElementById('root');
+          
+          // Add fade-out class to spinner
+          spinner.classList.add('spinner-fade-out');
+          
+          // Show root with fade-in
+          setTimeout(() => {
+            spinner.style.display = 'none';
+            root.classList.add('visible');
+          }, 300); // Match the transition duration
+        });
+
+        // Fallback: hide spinner after 5 seconds if React app doesn't fire event
+        setTimeout(() => {
+          const spinner = document.getElementById('loading-spinner');
+          const root = document.getElementById('root');
+          
+          if (spinner && spinner.style.display !== 'none') {
+            spinner.classList.add('spinner-fade-out');
+            setTimeout(() => {
+              spinner.style.display = 'none';
+              root.classList.add('visible');
+            }, 300);
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
