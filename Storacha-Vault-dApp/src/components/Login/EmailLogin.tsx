@@ -15,7 +15,7 @@ import {
   InfoCircledIcon,
   CheckIcon
 } from '@radix-ui/react-icons';
-import { FlameIcon } from 'lucide-react';
+import { CloudLightning, FlameIcon } from 'lucide-react';
 
 interface EmailLoginProps {
   onLogin?: (email: string, referralCode: string) => Promise<{ success: boolean; error?: string }>;
@@ -244,7 +244,7 @@ export const EmailLogin: React.FC<EmailLoginProps> = ({
                   </>
                 )}
               </Button>
-
+                 <Text align="center"> Or </Text>
               {/* Alternative: Direct redirect button */}
               <Button 
                 type="button"
@@ -253,7 +253,8 @@ export const EmailLogin: React.FC<EmailLoginProps> = ({
                 onClick={handleDirectStorachaSignup}
                 disabled={isSubmitDisabled || showLoading}
               >
-                Or signup to Storacha directly
+               <CloudLightning />  
+                Create Storacha Account
               </Button>
 
               {/* What happens next */}
