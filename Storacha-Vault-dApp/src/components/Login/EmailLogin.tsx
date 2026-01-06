@@ -253,7 +253,7 @@ export const EmailLogin: React.FC<EmailLoginProps> = ({
                 onClick={handleDirectStorachaSignup}
                 disabled={isSubmitDisabled || showLoading}
               >
-                Or open Storacha signup page directly
+                Or signup to Storacha directly
               </Button>
 
               {/* What happens next */}
