@@ -38,7 +38,7 @@ import {
   InfoCircledIcon  
 } from '@radix-ui/react-icons';
 import { AudioLinesIcon } from 'lucide-react';
-import { ViewMode } from '../../types/file';
+import { ViewMode } from '../../types';
 
 interface FileGalleryProps {
   files: Array<{
@@ -214,10 +214,10 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                       <Tooltip content="Copy IPFS link">
                         <IconButton
                           size="1"
-                          variant="solid"
+                          variant="soft"
                           onClick={(e) => {
                             e.stopPropagation();
-                            handleCopyLink(file.cid, file.name);
+                            handleCopyLink(file.cid);
                           }}
                         >
                           <CopyIcon width="14" height="14" />
@@ -226,7 +226,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                       <Tooltip content="Download">
                         <IconButton
                           size="1"
-                          variant="solid"
+                          variant="soft"
                           onClick={(e) => {
                             e.stopPropagation();
                             handleDownload(file);
@@ -238,7 +238,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                       <Tooltip content="View details">
                         <IconButton
                           size="1"
-                          variant="solid"
+                          variant="soft"
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedFile(file);
@@ -376,7 +376,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
 
   if (files.length === 0) {
     return (
-      <Container size="2" p="8">
+      <Container p="8">
         <Flex direction="column" align="center" justify="center" gap="4" style={{ minHeight: '400px' }}>
           <Box
             style={{
@@ -403,7 +403,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
   }
 
   return (
-    <Container size="4" p="4">
+    <Container>
       <Flex direction="column" gap="6">
         <Flex justify="between" align="center">
           <Flex align="center" gap="3">
@@ -614,7 +614,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                                 <Flex align="center" gap="2">
                                   <input
                                     type="text"
-                                    value={getShareableLink(selectedFile.cid, selectedFile.name)}
+                                    value={getShareableLink(selectedFile.cid)}
                                     readOnly
                                     style={{
                                       flex: 1,
@@ -630,7 +630,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                                     <IconButton
                                       size="2"
                                       variant="solid"
-                                      onClick={() => handleCopyLink(selectedFile.cid, selectedFile.name)}
+                                      onClick={() => handleCopyLink(selectedFile.cid)}
                                     >
                                       <CopyIcon />
                                     </IconButton>
@@ -674,7 +674,7 @@ export const FileGallery: React.FC<FileGalleryProps> = ({
                     <Flex gap="3" justify="end">
                       <Button
                         variant="soft"
-                        onClick={() => handleCopyLink(selectedFile.cid, selectedFile.name)}
+                        onClick={() => handleCopyLink(selectedFile.cid)}
                       >
                         <CopyIcon /> Copy Link
                       </Button>
