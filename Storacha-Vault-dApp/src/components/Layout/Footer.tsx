@@ -15,7 +15,6 @@ import {
   DiscordLogoIcon,
   LightningBoltIcon,
   GlobeIcon,
-  HeartFilledIcon,
   RocketIcon,
   CubeIcon,
   CodeIcon,
@@ -52,7 +51,7 @@ export const CreativeFooter: React.FC<FooterProps> = ({ isDarkTheme }) => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(circle at 20% 80%, var(--ruby-4) 0%, transparent 50%)',
+          background: 'radial-gradient(circle at 20% 80%, var(--red-4) 0%, transparent 50%)',
           opacity: 0.1,
           pointerEvents: 'none'
         }}
@@ -96,7 +95,7 @@ export const CreativeFooter: React.FC<FooterProps> = ({ isDarkTheme }) => {
                 <Text size="5" weight="bold" style={{ color: 'var(--mauve-12)' }}>
                   Storacha Vault
                 </Text>
-                <Badge color="ruby" variant="surface" size="1">
+                <Badge color="red" variant="surface" size="1">
                   <LightningBoltIcon /> Powered by IPFS
                 </Badge>
               </Flex>
@@ -111,31 +110,31 @@ export const CreativeFooter: React.FC<FooterProps> = ({ isDarkTheme }) => {
             <Flex gap="5">
               <IconButton
                 variant="ghost"
-                style={{ color: 'var(--ruby-9)' }}
+                style={{ color: 'var(--red-9)' }}
                 size="2"
                 asChild
               >
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/storacha/" target="_blank" rel="noopener noreferrer">
                   <GitHubLogoIcon />
                 </a>
               </IconButton>
               <IconButton
                 variant="ghost"
-                style={{ color: 'var(--ruby-9)' }}
+                style={{ color: 'var(--red-9)' }}
                 size="2"
                 asChild
               >
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/storachanetwork/" target="_blank" rel="noopener noreferrer">
                   <TwitterLogoIcon />
                 </a>
               </IconButton>
               <IconButton
                 variant="ghost"
-                style={{ color: 'var(--ruby-9)' }}
+                style={{ color: 'var(--red-9)' }}
                 size="2"
                 asChild
               >
-                <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/s6YuTenJTQ" target="_blank" rel="noopener noreferrer">
                   <DiscordLogoIcon />
                 </a>
               </IconButton>
@@ -155,7 +154,7 @@ export const CreativeFooter: React.FC<FooterProps> = ({ isDarkTheme }) => {
                 { icon: <RocketIcon />, label: 'Scalable Infrastructure' }
               ].map((feature, index) => (
                 <Flex key={index} gap="2" align="center">
-                  <Box style={{ color: 'var(--ruby-9)' }}>
+                  <Box style={{ color: 'var(--red-9)' }}>
                     {feature.icon}
                   </Box>
                   <Text size="2" color="gray">{feature.label}</Text>
@@ -238,42 +237,10 @@ export const CreativeFooter: React.FC<FooterProps> = ({ isDarkTheme }) => {
             <Text size="1" color="gray">
               © {currentYear} Storacha Vault. All rights reserved.
             </Text>
-            <Flex gap="4">
-              <Link 
-                href="#" 
-                size="1" 
-                color="gray"
-                style={{ textDecoration: 'none' }}
-              >
-                Privacy Policy
-              </Link>
-              <Link 
-                href="#" 
-                size="1" 
-                color="gray"
-                style={{ textDecoration: 'none' }}
-              >
-                Terms of Service
-              </Link>
-              <Link 
-                href="#" 
-                size="1" 
-                color="gray"
-                style={{ textDecoration: 'none' }}
-              >
-                Cookie Policy
-              </Link>
-            </Flex>
           </Flex>
 
-          <Flex gap="3" align="center">
-            <Flex align="center" gap="1">
-              <Text size="1" color="gray">Built with</Text>
-              <HeartFilledIcon style={{ color: 'var(--ruby-9)'}} />
-              <Text size="1" color="gray">by the community</Text>
-            </Flex>
-            
-            <Badge color="ruby" variant="surface" size="1">
+          <Flex gap="2" align="center">     
+            <Badge color="red" variant="surface" size="1">
               <CodeIcon /> Open Source
             </Badge>
             
