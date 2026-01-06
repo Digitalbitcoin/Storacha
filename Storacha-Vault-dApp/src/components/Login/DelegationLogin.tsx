@@ -135,16 +135,12 @@ export const DelegationLogin: React.FC<DelegationLoginProps> = ({
               </Badge>
             )}
 
-            <Flex gap="3">              
+            <Flex direction="column" gap="2">              
               <Button
                 type="submit"
                 size="3" 
                 disabled={isLoading || !key || !proof}
-                style={{ 
-                  flex: 1,
-                  background: 'linear-gradient(135deg, var(--ruby-9) 0%, var(--tomato-9) 100%)',
-                  color: 'white',
-                }}
+                variant="solid"
               >
                 {isLoading ? (
                   <>
