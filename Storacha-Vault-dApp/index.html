@@ -1,20 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Storacha Vault</title>
-    <meta name="description" content="Store, share, and preserve your digital art on the decentralized web with Storacha Vault.
-Your artwork lives forever on IPFS.">
+    <!-- Essential Meta Tags -->
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="origin-trial" content="disable-extensions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="origin-trial" content="disable-extensions">
+    
+    <!-- Performance Hints -->
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+    <meta http-equiv="Accept-CH-Lifetime" content="86400">
+    
+    <!-- Preload & Prefetch -->
+    <link rel="dns-prefetch" href="https://up.storacha.network">
+    <!-- <link rel="preload" href="/assets/index-BhaHP-DO.js" as="script" crossorigin>
+    <link rel="preload" href="/assets/index-DIS5dyso.css" as="style" crossorigin> -->
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JzsNCmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20vY2xpZW50JzsNCmltcG9ydCBBcHAgZnJvbSAnLi9BcHAnOw0KaW1wb3J0ICcuL2luZGV4LmNzcyc7DQoNClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSEpLnJlbmRlcigNCiAgPFJlYWN0LlN0cmljdE1vZGU+DQogICAgPEFwcCAvPg0KICA8L1JlYWN0LlN0cmljdE1vZGU+DQopOw==" as="script" />
+    
+    <!-- Title & Description -->
+    <title>Storacha Vault | Decentralized Storage for Digital Art & NFTs</title>
+    <meta name="description" content="Secure, permanent decentralized storage for digital art, NFTs, and creative assets. Store and share your artwork on IPFS with Storacha Vault.">
+      <!-- Keywords -->
+    <meta name="keywords" content="decentralized storage, IPFS, digital art, NFT storage, Web3, blockchain storage, file sharing, permanent storage, decentralized web, Storacha, Storacha Vault, cryptocurrency storage">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://storacha.site" />
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://storacha.site" />
+    <meta property="og:title" content="Storacha Vault | Decentralized Storage for Digital Art & NFTs" />
+    <meta property="og:description" content="Secure, permanent decentralized storage for digital art, NFTs, and creative assets. Store and share your artwork on IPFS with Storacha Vault." />
+    <meta property="og:image" content="https://storacha.site/storacha.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Storacha Vault - Decentralized Storage Platform" />
+    <meta property="og:site_name" content="Storacha Vault" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://storacha.site" />
+    <meta name="twitter:title" content="Storacha Vault | Decentralized Storage for Digital Art & NFTs" />
+    <meta name="twitter:description" content="Secure, permanent decentralized storage for digital art, NFTs, and creative assets. Store and share your artwork on IPFS with Storacha Vault." />
+    <meta name="twitter:image" content="https://storacha.site/storacha.png" />
+    <meta name="twitter:creator" content="@storacha" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#e91315" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Storacha Vault",
+      "url": "https://storacha.site",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web",
+      "description": "Decentralized storage platform for digital art, NFTs, and creative assets using IPFS technology.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Storacha",
+        "url": "https://storacha.site"
+      },
+      "keywords": "decentralized storage, IPFS, digital art, NFT storage, Web3",
+      "inLanguage": "en",
+      "browserRequirements": "Requires JavaScript. Requires a modern web browser.",
+      "screenshot": "https://storacha.site/storacha.png",
+      "license": "https://opensource.org/licenses/MIT"
+    }
+    </script>
+    
+    <!-- CSS Styles -->
     <style>
-           * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      /* Performance Optimizations */
+      :root {
+        --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      /* Reduced Motion Support */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
         }
-        
-      button{cursor: pointer !important;}
+      }
+
+      /* Base Reset */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }      
+
+      ::-webkit-scrollbar{width:4px;height:4px;}
+      ::-webkit-scrollbar-thumb{background:rgb(199, 0, 0);border-radius:4px;}
+      ::-webkit-scrollbar-track{background:rgba(255, 255, 255, 0.05);}  
+
+      button {
+        cursor: pointer !important;
+      }
       /* Loading Spinner Styles */
       #loading-spinner {
         position: fixed;
@@ -22,7 +133,7 @@ Your artwork lives forever on IPFS.">
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #ea6666 0%, #8d0303 100%);
+        background:  #e91315;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,18 +158,58 @@ Your artwork lives forever on IPFS.">
       .loading-text {
         color: white;
         margin-top: 20px;
-        font-size: 18px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        font-size: 1.125rem;
         font-weight: 500;
+        text-align: center;
+        max-width: 300px;
+        padding: 0 1rem;
       }
 
       .loading-logo {
         margin-bottom: 30px;
         color: white;
-        font-size: 28px;
-        font-weight: bold;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-        letter-spacing: 1px;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+
+      /* SEO-Friendly Fallback Content */
+      .seo-fallback {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .seo-fallback h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .seo-fallback h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #e91315;
+      }
+
+      .seo-fallback p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+
+      .seo-fallback ul {
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .seo-fallback li {
+        margin-bottom: 0.5rem;
       }
 
       /* Fade-out animation for spinner */
@@ -71,55 +222,201 @@ Your artwork lives forever on IPFS.">
       #root {
         opacity: 0;
         transition: opacity 0.3s ease-in;
+        min-height: 100vh;
       }
 
       #root.visible {
         opacity: 1;
       }
+
+      /* SEO Content for search engines (hidden visually) */
+      .seo-content {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      /* Accessibility Improvements */
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Focus Styles for Accessibility */
+      :focus-visible {
+        outline: 2px solid #e91315;
+        outline-offset: 2px;
+      }
+
+      /* Print Styles */
+      @media print {
+        #loading-spinner,
+        .spinner,
+        .loading-text {
+          display: none !important;
+        }        
+    
+      }
+
+      /* Mobile Optimization */
+      @media (max-width: 768px) {
+        .loading-logo {
+          font-size: 1.5rem;
+        }
+        
+        .loading-text {
+          font-size: 1rem;
+        }
+        
+        .spinner {
+          width: 40px;
+          height: 40px;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- Loading Spinner -->
-    <div id="loading-spinner">
-      <div class="loading-logo">🎨 Storacha Vault</div>
-      <div class="spinner"></div>
-      <div class="loading-text">Loading Storacha Vault DApp...</div>
+    <!-- SEO Content (for search engines) -->
+    <div class="seo-content" aria-hidden="true">
+      <h1>Storacha Vault - Decentralized Storage Platform</h1>
+      <h2>Secure IPFS Storage for Digital Art and NFTs</h2>
+      <p>Storacha Vault is a cutting-edge decentralized storage solution built on IPFS (InterPlanetary File System) technology. Our platform provides secure, permanent storage for digital art, NFTs, and creative assets.</p>
+      
+      <h2>Key Features</h2>
+      <ul>
+        <li>Permanent decentralized storage on IPFS</li>
+        <li>Zero-knowledge encryption for maximum security</li>
+        <li>Fast global content delivery</li>
+        <li>NFT-compatible storage solutions</li>
+        <li>Easy file sharing and management</li>
+        <li>Web3 integration for blockchain applications</li>
+      </ul>
+      
+      <h2>Why Choose Storacha Vault?</h2>
+      <p>Unlike traditional cloud storage, Storacha Vault uses decentralized technology to ensure your files are never lost or censored. Our platform is designed specifically for artists, creators, and Web3 enthusiasts who need reliable, permanent storage for their digital assets.</p>
+      
+      <h2>Get Started Today</h2>
+      <p>Join thousands of creators who trust Storacha Vault for their decentralized storage needs. Upload your first file and experience the future of web storage.</p>
+      
+      <p>Keywords: decentralized storage, IPFS storage, NFT storage, digital art storage, Web3 storage, blockchain storage, permanent file storage, decentralized web, Storacha, Storacha Vault</p>
     </div>
 
-    <div id="root"></div>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" role="alert" aria-live="polite" aria-label="Loading Storacha Vault application">
+      <div class="loading-logo">🔥 Storacha Vault</div>
+      <div class="spinner" aria-hidden="true"></div>
+      <div class="loading-text">Loading decentralized storage platform...</div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="root" role="main"></div>
+
+    <!-- SEO Fallback Content (for JavaScript-disabled browsers) -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; background: #e91315; color: white; min-height: 100vh;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Storacha Vault</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Welcome to Storacha Vault - the decentralized storage platform for digital art and NFTs.
+        </p>
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; max-width: 600px; margin: 0 auto;">
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">JavaScript Required</h2>
+          <p style="margin-bottom: 1.5rem;">
+            Storacha Vault requires JavaScript to function. Please enable JavaScript in your browser to access the decentralized storage platform.
+          </p>
+          <p style="font-size: 0.9rem; opacity: 0.9;">
+            Storacha Vault uses IPFS (InterPlanetary File System) technology to provide secure, permanent storage for your digital assets.
+          </p>
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Main Script -->
     <script type="module" src="/src/main.tsx"></script>
     
-    <script>
-      // Hide spinner when React app is mounted
+    <!-- Performance & SEO Scripts -->
+ <script>
+      // Performance monitoring
+      window.addEventListener('load', function() {
+        if (window.performance) {
+          const perfData = window.performance.timing;
+          const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+          console.log('Storacha Vault loaded in ' + pageLoadTime + 'ms');
+        }
+      });
+
+      // React app mount detection
       document.addEventListener('DOMContentLoaded', function() {
-        // Hide spinner and show root after React app is loaded
+        const spinner = document.getElementById('loading-spinner');
+        const root = document.getElementById('root');
+        
+        // Dispatch event when React app mounts
+        window.dispatchEvent(new CustomEvent('reactAppMounted'));
+        
+        // Hide spinner when React app is mounted
         window.addEventListener('reactAppMounted', function() {
-          const spinner = document.getElementById('loading-spinner');
-          const root = document.getElementById('root');
-          
-          // Add fade-out class to spinner
-          spinner.classList.add('spinner-fade-out');
-          
-          // Show root with fade-in
-          setTimeout(() => {
-            spinner.style.display = 'none';
-            root.classList.add('visible');
-          }, 300); // Match the transition duration
+          if (spinner && root) {
+            spinner.classList.add('spinner-fade-out');
+            setTimeout(() => {
+              spinner.style.display = 'none';
+              spinner.setAttribute('aria-hidden', 'true');
+              root.classList.add('visible');
+              root.setAttribute('aria-busy', 'false');
+              
+              // Update page title for SEO (optional dynamic content)
+              document.title = 'Storacha Vault | Decentralized Storage Platform';
+            }, 300);
+          }
         });
 
-        // Fallback: hide spinner after 5 seconds if React app doesn't fire event
+        // Fallback timeout
         setTimeout(() => {
-          const spinner = document.getElementById('loading-spinner');
-          const root = document.getElementById('root');
-          
           if (spinner && spinner.style.display !== 'none') {
             spinner.classList.add('spinner-fade-out');
             setTimeout(() => {
               spinner.style.display = 'none';
-              root.classList.add('visible');
+              spinner.setAttribute('aria-hidden', 'true');
+              if (root) {
+                root.classList.add('visible');
+                root.setAttribute('aria-busy', 'false');
+              }
             }, 300);
           }
         }, 500);
+
+        // Send pageview to analytics (example)
+        if (typeof gtag !== 'undefined') {
+          gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'Storacha Vault',
+            page_path: '/'
+          });
+        }
+      });
+
+      // Error handling for better user experience
+      window.addEventListener('error', function(e) {
+        console.error('Storacha Vault error:', e.error);
+        // Could send to error tracking service here
+      });
+
+      // Online/Offline detection
+      window.addEventListener('online', function() {
+        console.log('Storacha Vault is back online');
+        // Could show a notification here
+      });
+
+      window.addEventListener('offline', function() {
+        console.log('Storacha Vault is offline - using cached content');
+        // Could show offline notification here
       });
     </script>
   </body>
