@@ -30,7 +30,7 @@ import {
   ListBulletIcon
 } from '@radix-ui/react-icons';
 import { useStoracha } from '../hooks/useStoracha';
-import { EmailLogin } from './Login/EmailRefLogin';
+import { EmailLogin } from './Login/EmailLogin';
 import { DelegationLogin } from './Login/DelegationLogin';
 import { StorachaUpload } from './Upload/StorachaUpload';
 import { FileGallery } from './Gallery/FileGallery';
@@ -761,4 +761,5 @@ export const Dashboard: React.FC<{ isDarkTheme: boolean; onThemeToggle: () => vo
     />
     </Box>
   );
+
 };
